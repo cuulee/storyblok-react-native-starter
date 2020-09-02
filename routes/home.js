@@ -10,7 +10,9 @@ export default class Home extends React.Component {
       data: ''
    }
    async componentDidMount() {
-      const resp = await storyblok.get('cdn/stories/home');
+      const resp = await storyblok.get('cdn/stories/home', {
+         version: 'draft'
+      });
       this.setState({ data: resp.data.story })
    }
    goToBlog = () => {
@@ -21,7 +23,7 @@ export default class Home extends React.Component {
    }
    render() {
       if(this.state.data) {
-         const { description, headline, logo } = this.state.data.content.body[0]
+         const { description, headline, logo, _editable } = this.state.data.content.body[0]
          return (
             <View style={styles.container}>
                <Image style={styles.logo} source={{ uri: logo.filename }}></Image>
@@ -41,7 +43,6 @@ export default class Home extends React.Component {
                   </TouchableOpacity>
                </View>
             </View>
-
          )
       } else {
          return (

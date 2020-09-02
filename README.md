@@ -5,6 +5,8 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Connecting Storyblok](#storybloksdk)
+- [Importing the schema](#schema)
+- [Running the PWA in Storyblok](#pwastoryblok)
 - [Usage](#documentation)
 - [Contributing](../CONTRIBUTING.md)
 
@@ -52,6 +54,28 @@ let Storyblok = new StoryblokClient({
   }
 })
 ```
+
+## Importing the Schema <a name = "schema"></a>
+
+You can import the example schema file `storyblok.schema.example.json` through the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space setting.
+
+```bash
+# how to use
+storyblok push-components <SOURCE> --space <SPACE_ID>
+
+# example
+storyblok push-components ./storyblok.schema.example.json --space 12345
+```
+
+After the import you will have all the components under `Components` in your left sidebar. To be able to view everything you will need to add some content:
+
+1. Home: Add a title, description and logo
+2. Blog: Create a new folder with the exisiting content type `Post`.
+3. Post: Create a post with a title, image, intro, long text
+
+## Running the PWA in Storyblok <a name = "pwastoryblok"></a>
+
+If you run Expo in the web browser, you will be able to open a localhost connection like `http://localhost:19006/`. You can add this URL in the settings under `Preview Urls` see the [Storyblok Documentation](https://www.storyblok.com/docs/guide/getting-started#setup-of-the-visual-editor-preview) for more details.
 
 ## Documentation <a name = "documentation"></a>
 
