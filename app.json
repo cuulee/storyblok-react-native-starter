@@ -1,7 +1,13 @@
 {
   "expo": {
-    "name": "storyblok-react-native-starter",
+    "name": "Starterkit React Native with Storyblok",
     "slug": "storyblok-react-native-starter",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
