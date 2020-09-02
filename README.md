@@ -1,5 +1,9 @@
 # Storyblok Starter Kit for React Native with Expo
 
+<p>
+  <img src="./assets/icon.png" width="40" alt="Storyblok Starter Screens">
+</p>
+
 ## Table of Contents
 
 - [About](#about)
@@ -12,7 +16,11 @@
 
 ## About <a name = "about"></a>
 
-Storyblok is a simple Headless CMS that can handle content across multiple platforms.
+Storyblok is a simple Headless CMS that can handle content across multiple platforms. This starter connects Expo with the Storyblok API to allow handling content across different platforms (web, android, ios).
+
+<p align="center">
+  <img src="./assets/mockup.png" width="350" alt="Storyblok Starter Screens">
+</p>
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -75,7 +83,7 @@ After the import you will have all the components under `Components` in your lef
 
 ## Running the PWA in Storyblok <a name = "pwastoryblok"></a>
 
-If you run Expo in the web browser, you will be able to open a localhost connection like `http://localhost:19006/`. You can add this URL in the settings under `Preview Urls` see the [Storyblok Documentation](https://www.storyblok.com/docs/guide/getting-started#setup-of-the-visual-editor-preview) for more details.
+If you run Expo in the web browser, you will be able to open a localhost connection like `http://localhost:19006/`. You can add this URL in the Storyblok settings under `Preview Urls` see the [Storyblok Documentation](https://www.storyblok.com/docs/guide/getting-started#setup-of-the-visual-editor-preview) for more details. Now you can preview your app directly in Storyblok and change the content.
 
 ## Documentation <a name = "documentation"></a>
 
