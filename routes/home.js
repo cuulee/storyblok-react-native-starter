@@ -26,7 +26,7 @@ export default class Home extends React.Component {
             <View style={styles.container}>
                <Image style={styles.logo} source={{ uri: logo.filename }}></Image>
                <Text style={styles.titleText}>{headline}</Text>
-               <Text>{description}</Text>
+               <Text style={styles.subText}>{description}</Text>
                <View style={styles.horizontal}>
                   <TouchableOpacity style={styles.button}>
                      <Button title="Blog" color="#09b3af" onPress={this.goToBlog}></Button>
@@ -34,10 +34,10 @@ export default class Home extends React.Component {
                </View>
                <View style={styles.horizontal}>
                   <TouchableOpacity style={styles.button}>
-                     <Button title="Storyblok Docs" color="#222" onPress={() => this.openLink('https://www.storyblok.com/docs/guide/introduction')}></Button>
+                     <Button title="Storyblok Docs" color="#09b3af" onPress={() => this.openLink('https://www.storyblok.com/docs/guide/introduction')}></Button>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.button}>
-                     <Button title="Expo Docs" color="#09b3af" onPress={() => this.openLink('https://docs.expo.io/')}></Button>
+                     <Button title="Expo Docs" color="#222" onPress={() => this.openLink('https://docs.expo.io/')}></Button>
                   </TouchableOpacity>
                </View>
             </View>
@@ -71,10 +71,16 @@ const styles = StyleSheet.create({
    logo: {
       width: 320,
       height: 80,
-      marginTop: 120
+      marginTop: 120,
+      marginHorizontal: "auto"
    },
    titleText: {
       fontSize: 30,
       fontWeight: "bold",
+      textAlign: "center"
+   },
+   subText: {
+      fontSize: 20,
+      textAlign: "center"
    },
 })
