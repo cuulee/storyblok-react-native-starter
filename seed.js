@@ -15,10 +15,10 @@ args.forEach((arg) => {
 
 let blog_folder = {"story":{"name":"blog","slug":"blog","is_folder":true,"parent_id":"0","default_root":"doc"}}
 let first_entry = {"story":{"name":"First Entry","slug":"first-entry","parent_id":"PARENT_ID","content":{
-    "intro": "I just started working at Storyblok.",
-    "title": "First Day",
+    "intro": "This is my very first post!",
+    "title": "First Post",
     "component": "Post",
-    "long_text": "I scheduled meetings with the team and researched the possibilities for a starter kit. "
+    "long_text": "I am exited to start this blog!"
 }}}
 
 
@@ -63,7 +63,7 @@ async function startSeed() {
   });
   homeStory.path = '/'
   homeStory.content = {"component": "page", "body":[{
-    "headline": "Storyblok Expo Starterkit",
+    "headline": "Storyblok React Native Starterkit",
     "component": "teaser",
     "logo": null,
     "description": "Organize your content for the world"
