@@ -23,17 +23,36 @@ export default class About extends React.Component {
         Actions.home()
     }
     render() {
+        const months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+          ];
+          
+          
         if (this.state.data) {
             const posts = this.state.data
-
             return (
                 <ScrollView style={styles.container}>
                     {posts.map(post => {
                         const d = new Date(post.published_at)
+                        const { image } = post.content
+                        const items = image.match(/(\d)+x(\d)+/g)[0].split('x')
+                        const [width, height] = items
+                        const ratio = height / width
                         return (<TouchableOpacity style={styles.post} key={post.content.title} onPress={() => this.goToPost(post.full_slug)}>
-                            <Image style={styles.image} source={{ uri: post.content.image }} />
+                            {post.content.image && (<Image style={{ width: 250, height: ratio * 250 }} source={{ uri: post.content.image }} />)}
                             <Text style={styles.heading}>{post.content.title}</Text>
-                            <Text style={styles.date}>{d.getFullYear()} - {d.getMonth()} - {d.getDay()}</Text>
+                            <Text style={styles.date}>{d.getDay()} {months[d.getMonth()]} {d.getFullYear()}</Text>
                         </TouchableOpacity>)
                     })}
                     <TouchableOpacity style={styles.button}>
@@ -55,13 +74,11 @@ export default class About extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
+        padding: 6,
         margin: "auto"
     },
     post: {
-        borderWidth: 1,
-        borderStyle: 'solid',
-        borderColor: '#888',
+        backgroundColor: '#F6F8F9',
         borderRadius: 4,
         padding: 20,
         margin: 20
@@ -79,7 +96,6 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: 80,
-        resizeMode: 'contain',
      },
     content: {
         height: 100,

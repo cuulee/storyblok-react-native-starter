@@ -66,7 +66,7 @@ let Storyblok = new StoryblokClient({
 })
 ```
 
-## Importing the exmaple content into Storyblok <a name = "schema"></a>
+## Importing the example content into Storyblok <a name = "schema"></a>
 
 ### Components
 You can import the example components through the file `seed.components.json` with the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space **settings**.
@@ -74,7 +74,7 @@ You can import the example components through the file `seed.components.json` wi
 First you need to install the Storyblok CLI
 
 ```bash
-# Install Expo CLI if you have not already
+# Install Storyblok CLI if you have not already
 npm install -g storyblok
 ```
 

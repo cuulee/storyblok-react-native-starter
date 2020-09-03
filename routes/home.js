@@ -21,12 +21,20 @@ export default class Home extends React.Component {
    openLink = (url) => {
       Linking.openURL(url);
    }
+   getImageSize = (filename) => {
+      let image = {
+         width: "",
+         height: "",
+      }
+      Image.getSize(filename, (width, height) => {image.width = width, image.height = height});
+      return image
+   }
    render() {
       if(this.state.data) {
          const { description, headline, logo, _editable } = this.state.data.content.body[0]
          return (
             <View style={styles.container}>
-               <Image style={styles.logo} source={{ uri: logo.filename }}></Image>
+               {logo && (<Image style={styles.logo} source={{ uri: logo.filename }}></Image>)}
                <Text style={styles.titleText}>{headline}</Text>
                <Text style={styles.subText}>{description}</Text>
                <View style={styles.horizontal}>

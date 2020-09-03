@@ -22,10 +22,14 @@ export default class Post extends React.Component {
     render() {
         if (this.state.data) {
             const post = this.state.data[0]
+            const { image } = post.content
+            const items = image.match(/(\d)+x(\d)+/g)[0].split('x')
+            const [width, height] = items
+            const ratio = height / width
 
             return (
                 <ScrollView style={styles.container}>
-                    <Image style={styles.image} source={{ uri: post.content.image }} />
+                    {post.content.image && (<Image style={{ width: 300, height: ratio * 300, marginVertical: 40 }} source={{ uri: post.content.image }} />)}
                     <Text style={styles.heading}>{post.content.title}</Text>
                     <Text style={styles.subheading}>{post.content.intro}</Text>
 
@@ -67,13 +71,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     long_text: {
-        marginBottom: 40,
-    },
-    image: {
-        width:'100%',
-        height: 120,
-        resizeMode: 'center',
-        marginTop: 80,
         marginBottom: 40,
     },
     content: {
