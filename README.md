@@ -18,7 +18,7 @@
 
 Storyblok is a simple Headless CMS that can handle content across multiple platforms. This starter connects Expo with the Storyblok API to allow handling content across different platforms (web, android, ios).
 
-<p align="center">
+<p>
   <img src="./assets/mockup.jpg" width="650" alt="Storyblok Starter Screens">
 </p>
 
