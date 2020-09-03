@@ -21,13 +21,14 @@
     "react-native-router-flux": "^4.2.0-beta.2",
     "react-native-screens": "~2.9.0",
     "react-native-web": "^0.11.7",
-    "react-native-webview": "^10.8.3",
+    "react-native-webview": "9.4.0",
     "react-router-dom": "^5.2.0",
     "storyblok-js-client": "^2.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
-    "babel-preset-expo": "^8.1.0"
+    "babel-preset-expo": "^8.1.0",
+    "netrc": "^0.1.4"
   },
   "private": true
 }

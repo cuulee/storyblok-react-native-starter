@@ -29,6 +29,9 @@ First you need to install the expo-cli
 ```bash
 # Install Expo CLI if you have not already
 npm install -g expo-cli
+
+# Install dependencies
+npm i
 ```
 
 Then you can start the general or a specific simulator
@@ -63,19 +66,38 @@ let Storyblok = new StoryblokClient({
 })
 ```
 
-## Importing the Schema <a name = "schema"></a>
+## Importing the exmaple content into Storyblok <a name = "schema"></a>
 
-You can import the example schema file `storyblok.schema.example.json` through the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space setting.
+### Components
+You can import the example components through the file `seed.components.json` with the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space **settings**.
+
+First you need to install the Storyblok CLI
+
+```bash
+# Install Expo CLI if you have not already
+npm install -g storyblok
+```
+
+Then you can push the exisiting `seed.components.json` structure to Storyblok.
 
 ```bash
 # how to use
 storyblok push-components <SOURCE> --space <SPACE_ID>
 
 # example
-storyblok push-components ./storyblok.schema.example.json --space 12345
+storyblok push-components ./seed.components.json --space 12345
 ```
 
-After the import you will have all the components under `Components` in your left sidebar. To be able to view everything you will need to add some content:
+After the import you will have all the components under `Components` in your left sidebar.
+
+### Content
+You can just run the `seed.js` file in this folder to add some basic content for the starter:
+
+```bash
+node seed.js --space=12345
+```
+
+Or you can create the content by hand in Storyblok:
 
 1. Home: Add a title, description and logo
 2. Blog: Create a new folder with the exisiting content type `Post`.

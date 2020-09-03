@@ -33,7 +33,7 @@ export default class About extends React.Component {
                         return (<TouchableOpacity style={styles.post} key={post.content.title} onPress={() => this.goToPost(post.full_slug)}>
                             <Image style={styles.image} source={{ uri: post.content.image }} />
                             <Text style={styles.heading}>{post.content.title}</Text>
-                            <Text style={styles.date}>{d.getFullYear()} - {d.getMonth()}</Text>
+                            <Text style={styles.date}>{d.getFullYear()} - {d.getMonth()} - {d.getDay()}</Text>
                         </TouchableOpacity>)
                     })}
                     <TouchableOpacity style={styles.button}>
