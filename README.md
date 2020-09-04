@@ -22,6 +22,15 @@ Storyblok is a simple Headless CMS that can handle content across multiple platf
   <img src="./assets/mockup.jpg" width="650" alt="Storyblok Starter Screens">
 </p>
 
+## Cheatsheet <a name = "about"></a>
+
+You can find all important steps on the cheatsheet or in the documentation below.
+
+<p>
+  <img src="./assets/cheatsheet.jpg" width="650" alt="Storyblok Cheatsheet">
+</p>
+
+
 ## Getting Started <a name = "getting_started"></a>
 
 First you need to install the expo-cli
