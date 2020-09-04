@@ -27,9 +27,9 @@ Storyblok is a simple Headless CMS that can handle content across multiple platf
 
 You can find all important steps on the cheatsheet or in the documentation below.
 
-<p>
+<a href="./assets/cheatsheet.pdf">
   <img src="./assets/cheatsheet.jpg" width="650" alt="Storyblok Cheatsheet">
-</p>
+</a>
 
 
 ## Getting Started <a name = "getting_started"></a>
