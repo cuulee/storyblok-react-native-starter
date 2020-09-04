@@ -7,6 +7,7 @@
 ## Table of Contents
 
 - [About](#about)
+- [Cheatsheet](#cheatsheet)
 - [Getting Started](#getting_started)
 - [Connecting Storyblok](#storybloksdk)
 - [Importing the schema](#schema)
